@@ -1,0 +1,11 @@
+
+<main class="h-full  text-neutral-200 bg-[#141414] overflow-x-hidden">
+    <app-header></app-header>
+    <app-banner [bannerTitle]="(bannerDetails$ | async)?.original_title" [bannerOverview]="(bannerDetails$ | async)?.overview" [key]="(bannerVideo$  | async)?.results[0].key"></app-banner>
+    <app-movie-carousel [title]="'Popular on Netflix'" [videoContent]="movies" />
+    <app-movie-carousel [title]="'Trending TV shows'" [videoContent]="tvShows" />
+    <app-movie-carousel [title]="'Now Playing Movies'" [videoContent]="nowPlayingMovies" />
+    <app-movie-carousel [title]="'Popular Movies'" [videoContent]="popularMovies" />
+    <app-movie-carousel [title]="'Top Rated Movies'" [videoContent]="topRatedMovies" />
+    <app-movie-carousel [title]="'Upcoming Movies'" [videoContent]="upcomingMovies" />
+</main>
